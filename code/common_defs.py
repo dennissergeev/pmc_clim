@@ -3,9 +3,12 @@
 Common objects for PMC climatology analysis code
 """
 import calendar
+import string
 
 import numpy as np
 
+
+iletters = iter(string.ascii_lowercase)
 
 cat_kw = dict(filt_by_time=True, filt_by_dist=True, filt_by_vort=True,
               filt_by_domain_bounds=True, filt_by_land=True,
@@ -27,6 +30,7 @@ datasets = ['era5', 'interim']
 START_YEAR = 2008
 nyr = 9
 winters = [f'{START_YEAR+i}_{START_YEAR+i+1}' for i in range(nyr)]
+winter_dates = {k: (f"{k.split('_')[0]}-10-01", f"{k.split('_')[1]}-04-30") for k in winters}
 
 ndays_per_month_total = np.zeros((12), dtype=int)
 for yr in range(START_YEAR, START_YEAR + nyr):

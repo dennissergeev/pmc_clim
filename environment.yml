@@ -15,6 +15,7 @@ dependencies:
 - python-stratify
 - pytest
 - scipy
+- scikit-learn
 - tqdm
 - xarray
 - pip:

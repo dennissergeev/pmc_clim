@@ -8,7 +8,7 @@ import cartopy.crs as ccrs
 import matplotlib as mpl
 # from matplotlib.offsetbox import AnchoredText
 import matplotlib.pyplot as plt
-# import numpy as np
+import numpy as np
 # import arke
 # import misc_utils as misc
 
@@ -22,8 +22,9 @@ AXGR_KW = dict(axes_pad=0.2,
                cbar_mode='single',
                cbar_pad=0.2,
                cbar_size='3%')
+
 # Common cartopy settings
-map_kw = dict(transform=ccrs.PlateCarree())
+trans = dict(transform=ccrs.PlateCarree())
 COAST = dict(scale='50m', alpha=0.5,
              edgecolor='#333333', facecolor='#AAAAAA')
 clon = 15
@@ -33,6 +34,13 @@ LCC_KW = dict(clon=clon, clat=clat, coast=COAST, extent=extent,
               ticks=None)
 
 mapkey = dict(transform=ccrs.PlateCarree())
+
+clev101 = list(np.linspace(-1, 1, 9))
+clev101.remove(0)
+clev101 = np.array(clev101)
+
+# Density map plot settings
+abs_plt_kw = dict(cmap='Oranges', extend='max', **trans)
 
 
 def div_cmap(numcolors=11, name='bwr_div_cmap',
