@@ -1,0 +1,21 @@
+name: clim
+channels:
+- conda-forge
+dependencies:
+- cartopy
+- cython
+- ipykernel
+- iris
+- matplotlib
+- numpy
+- pandas
+- pytables
+- python=3.6
+- python-stratify
+- pytest
+- scipy
+- tqdm
+- xarray
+- pip:
+  - git+https://github.com/dennissergeev/arke.git
+  - git+https://github.com/dennissergeev/octant.git
