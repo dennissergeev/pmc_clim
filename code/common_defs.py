@@ -38,3 +38,34 @@ for yr in range(START_YEAR, START_YEAR + nyr):
         ndays_per_month_total[1] += 1
 
 month_weights = 30 / ndays_per_month_total
+
+conf_key_typeset = {
+    'zeta_max0': '$\zeta_{max}$',
+    'zeta_min0': '$\zeta_{min}$',
+    'r_steering': '$r_{steer}$',
+    'smth_type': 'Smoothing type',
+    'r_smth': '$r_{smooth}$',
+    'del_r': '$r_{link}$',
+    'merge_opt': 'Merging option',
+    'halo_r': '$r_{halo}$',
+    'vor_lvl': '$\zeta_{level}$',
+}
+
+def runs_grid_formatter(run_dict):
+    txt = ''
+    for k, v in run_dict.items():
+        key = conf_key_typeset.get(k, k)
+#         val = misc.unit_format(v)
+#         if val == '':
+#             val = '1'
+        if v < 1:
+            val = f'{v:5.5f}'
+        else:
+            val = v
+        s = f'{key} = {val}'
+        txt += f' {s:}\n'
+    if not txt:
+        txt = 'CTRL'
+    else:
+        txt = txt.strip('\n')
+    return txt
