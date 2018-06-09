@@ -3,6 +3,7 @@
 Various plotting functions and useful parameters
 """
 from itertools import cycle
+import string
 
 import cartopy.crs as ccrs
 import matplotlib as mpl
@@ -15,6 +16,9 @@ import numpy as np
 
 cc = plt.rcParams['axes.prop_cycle']
 icc = cycle(cc)
+
+iletters = iter(string.ascii_lowercase)
+
 # Common plotting settings
 CBARKW = dict(orientation='vertical')
 AXGR_KW = dict(axes_pad=0.2,
