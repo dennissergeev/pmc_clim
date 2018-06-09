@@ -5,6 +5,7 @@ dependencies:
 - cartopy
 - cython
 - ipykernel
+- ipywidgets
 - iris
 - matplotlib
 - numpy

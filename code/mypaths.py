@@ -12,6 +12,10 @@ topdir = Path('.').absolute().parent
 # Temporary
 phddir = Path.home()/'phd'
 plotdir = phddir/'plots'/'climatology'
+starsdir = phddir/'STARSDAT'
+trackresdir = phddir/'pmc_tracking'/'results'
+procdir = phddir/'pmc_tracking'/'results'/'processed_data'
+runsgridfile = trackresdir/'runs_grid.json'
 
 # Output directories
 # plotdir = topdir/'figures'
@@ -19,9 +23,3 @@ plotdir = phddir/'plots'/'climatology'
 # Reanalyses
 era5_dir = phddir/'reanalysis'/'era5'
 interim_dir = phddir/'reanalysis'/'interim'
-
-# Tracking
-pmctrackdir = phddir/'pmc_tracking'/'pmctrack'
-trackresdir = phddir/'pmc_tracking'/'results'
-procdir = phddir/'pmc_tracking'/'results'/'processed_data'
-runsgridfile = trackresdir/'runs_grid.json'
