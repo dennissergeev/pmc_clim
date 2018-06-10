@@ -10,6 +10,7 @@ dependencies:
 - matplotlib
 - numpy
 - pandas
+- pyarrow
 - pytables
 - python=3.6
 - python-stratify
