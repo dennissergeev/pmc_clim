@@ -13,7 +13,11 @@ cat_kw = dict(filt_by_time=True, filt_by_dist=True, filt_by_vort=True,
               dist_thresh=300.0, type_thresh=0.2,
               vort_thresh0=0.0003, vort_thresh1=0.00045, coast_rad=70.)
 
-aliases = dict(basic='VF', moderate='PMC', strong='IC')
+aliases = dict(basic='VF',
+               moderate='PMC',
+               strong='IC',
+               era5='ERA5',
+               interim='ERA-Interim')
 
 toponyms = [
     dict(name='Svalbard', lon=14, lat=79),
@@ -29,7 +33,9 @@ datasets = ['era5', 'interim']
 START_YEAR = 2008
 nyr = 9
 winters = [f'{START_YEAR+i}_{START_YEAR+i+1}' for i in range(nyr)]
-winter_dates = {k: (f"{k.split('_')[0]}-10-01", f"{k.split('_')[1]}-04-30") for k in winters}
+winter_dates = {k: (f"{k.split('_')[0]}-10-01",
+                    f"{k.split('_')[1]}-04-30")
+                for k in winters}
 
 ndays_per_month_total = np.zeros((12), dtype=int)
 for yr in range(START_YEAR, START_YEAR + nyr):
@@ -50,6 +56,7 @@ conf_key_typeset = {
     'halo_r': '$r_{halo}$',
     'vor_lvl': '$\zeta_{level}$',
 }
+
 
 def runs_grid_formatter(run_dict):
     txt = ''
