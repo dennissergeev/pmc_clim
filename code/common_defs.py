@@ -20,12 +20,12 @@ aliases = dict(basic='VF',
                interim='ERA-Interim')
 
 toponyms = [
-    dict(name='Svalbard', lon=14, lat=79),
-    dict(name='Greenland', lon=-21, lat=80),
+    dict(name='Svalbard', lon=20, lat=79),
+    dict(name='Greenland', lon=-30, lat=80),
     dict(name='Norway', lon=23, lat=70),
-    dict(name='Fram Strait', lon=-5, lat=79),
-    dict(name='Barents\nSea', lon=25, lat=73),
-    dict(name='Norwegian\nSea', lon=5, lat=70)
+    dict(name='Fram Strait', lon=0, lat=80),
+    dict(name='Barents\nSea', lon=40, lat=75),
+    dict(name='Norwegian\nSea', lon=5, lat=66)
 ]
 
 datasets = ['era5', 'interim']
