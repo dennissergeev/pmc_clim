@@ -7,11 +7,18 @@ import calendar
 import numpy as np
 
 
-cat_kw = dict(filt_by_time=True, filt_by_dist=True, filt_by_vort=True,
+cat_kw = dict(filt_by_time=True, filt_by_dist=True, filt_by_vort=False,
+              filt_by_percentile=True, strong_percentile=90,
               filt_by_domain_bounds=True, filt_by_land=True,
               time_thresh0=6, time_thresh1=9,
               dist_thresh=300.0, type_thresh=0.2,
               vort_thresh0=0.0003, vort_thresh1=0.00045, coast_rad=70.)
+# cat_kw = dict(filt_by_time=True, filt_by_dist=True, filt_by_vort=True,
+#               filt_by_percentile=False, strong_percentile=90,
+#               filt_by_domain_bounds=True, filt_by_land=True,
+#               time_thresh0=6, time_thresh1=9,
+#               dist_thresh=300.0, type_thresh=0.2,
+#               vort_thresh0=0.0003, vort_thresh1=0.00045, coast_rad=70.)
 
 aliases = dict(basic='VF',
                moderate='PMC',

@@ -21,16 +21,16 @@ lon2d, lat2d = np.meshgrid(lsm.longitude, lsm.latitude)
 
 period = f'{winters[0][:4]}_{winters[-1][-4:]}'
 
-for dataset, run_nums in tqdm(runs2process.items(), desc='dataset'):
+for dset, run_nums in tqdm(runs2process.items(), desc='dset'):
     for run_num in tqdm(run_nums, leave=False, desc='run_num'):
         TR = TrackRun()
         for winter in tqdm(winters, desc='winter', leave=False):
-            track_res_dir = (mypaths.trackresdir / dataset
+            track_res_dir = (mypaths.trackresdir / dset
                              / f'run{run_num:03d}' / winter)
             TR += TrackRun(track_res_dir)
 
         TR.categorise(lsm=lsm, **cat_kw)
 
-        TR.data.to_parquet((mypaths.trackresdir /
-                            f'{dataset}_run{run_num:03d}_{period}.parquet'),
+        TR.data.to_parquet((mypaths.procdir /
+                           f'{dset}_run{run_num:03d}_{period}_top10.parquet'),
                            engine='pyarrow')
