@@ -26,3 +26,5 @@ savefig.bbox        : tight    # 'tight' or 'standard'.
                                 # backends but will workd with temporary file based ones:
                                 # e.g. setting animation.writer to ffmpeg will not work,
                                 # use ffmpeg_file instead
+axes.spines.top : False
+axes.spines.right : False
