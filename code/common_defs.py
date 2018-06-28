@@ -38,6 +38,12 @@ toponyms = [
 
 datasets = ['era5', 'interim']
 
+dset_names = (
+    ('era5_run000', 'ERA5, CTRL'),
+    ('interim_run106', 'ERA-Interim, CTRL'),
+    ('interim_run100', 'ERA-Interim, LVT')
+)
+
 START_YEAR = 2008
 nyr = 9
 winters = [f'{START_YEAR+i}_{START_YEAR+i+1}' for i in range(nyr)]
