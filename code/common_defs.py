@@ -28,12 +28,13 @@ aliases = dict(basic='VF',
 
 toponyms = [
     dict(name='Svalbard', lon=20, lat=79),
-    dict(name='Greenland', lon=-40, lat=80),
+    dict(name='Greenland', lon=-35, lat=80),
     dict(name='Norway', lon=23, lat=70),
     dict(name='Fram\nStrait', lon=0, lat=80),
+    dict(name='Greenland\nSea', lon=-5, lat=73),
     dict(name='Barents\nSea', lon=40, lat=75),
     dict(name='Norwegian\nSea', lon=5, lat=66),
-    dict(name='Franz Josef\nLand', lon=57, lat=80.5),
+    dict(name='Franz\nJosef\nLand', lon=53, lat=80.5),
 ]
 
 datasets = ['era5', 'interim']
