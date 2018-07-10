@@ -8,6 +8,7 @@ dependencies:
 - ipywidgets
 - iris
 - matplotlib
+- metpy
 - numpy
 - pandas
 - pyarrow
@@ -20,5 +21,6 @@ dependencies:
 - tqdm
 - xarray
 - pip:
+  - cached_property
   - git+https://github.com/dennissergeev/arke.git
   - git+https://github.com/dennissergeev/octant.git
